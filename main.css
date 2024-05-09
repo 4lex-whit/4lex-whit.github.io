@@ -24,7 +24,7 @@ header {
 	border-bottom-color: darkslategrey;
 }
 
-#title, #author {
+#title, #author, #menu-link {
 	margin: 0;
 }
 
