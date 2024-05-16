@@ -19,6 +19,7 @@
 				<ol>
 					<li><a href="#mlfq">Multilevel Feedback Queue</a></li>
 					<li><a href="#srt">Shortest Remaining Time</a></li>
+					<li><a href="#sjf">Shortest Job First</a></li>
 				</ol>
 			</div>
 
@@ -129,6 +130,65 @@
 
 					<ul>
 						<li><strong>Real-time</strong> - it will enable it to react to new inputs faster</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Shortest Job First -->
+			<div id="sjf" class="border_left">
+				<h2>Shortest Job First</h2>
+
+				<p>It works exactly the same as <em>Shortest Remaining Time</em>, but is <strong>non-preemptive</strong> - it will not interrupt what's in the CPU</p>
+			</div>
+
+			<!-- Round Robin -->
+			<div id="rr" class="border_left">
+				<h2>Round Robin</h2>
+
+				<div class="list">
+					<ol>
+						<li><a href="#rr-how">How it works</a></li>
+						<li><a href="#rr-advantages">Advantages</a></li>
+						<li><a href="#rr-disadvantages">Disadvantages</a></li>
+						<li><a href="#rr-os">Operating Systems</a></li>
+					</ol>
+				</div>
+
+				<!-- How it works -->
+				<div id="rr-how" class="item">
+					<h3>How it works</h3>
+
+					<ul>
+						<li>Each process is assigned a <strong>time quantum/slice</strong></li>
+						<li>If a process takes longer to execute than its time quantum/slice, it is moved to the <strong>back of the queue</strong></li>
+						<li>It's a <strong>preemptive</strong> algorithm as it will interrupt what's in the CPU</li>
+					</ul>
+				</div>
+
+				<!-- Advantages -->
+				<div id="rr-advantages" class="item">
+					<h3>Advantages</h3>
+
+					<ul>
+						<li>It splits time <strong>fairly</strong> between all processes</li>
+					</ul>
+				</div>
+
+				<!-- Disadvantages -->
+				<div id="rr-disadvantages" class="item">
+					<h3>Disadvantages</h3>
+
+					<ul>
+						<li>It is <strong>not efficient</strong> with longer processes</li>
+					</ul>
+				</div>
+
+				<!-- Operating Systems-->
+				<div id="rr-os" class="item">
+					<h3>Operating Systems</h3>
+
+					<ul>
+						<li>Windows</li>
 					</ul>
 				</div>
 			</div>
