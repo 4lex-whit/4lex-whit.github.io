@@ -17,8 +17,66 @@
 			<div class="border_left">
 				<h2>Contents</h2>
 				<ol>
-					<li><a href="#"></a></li>
+					<li><a href="#mlfq">Multilevel Feedback Queue</a></li>
 				</ol>
+			</div>
+
+			<!-- Multilevel Feedback Queue -->
+			<div id="mlfq" class="border_left">
+				<h2>Multilevel Feedback Queue</h2>
+				
+				<div class="list">
+					<ol>
+						<li><a href="#mlfq-how">How it works</a></li>
+						<li><a href="#mlfq-advantages">Advantages</a></li>
+						<li><a href="#mlfq-disadvantages">Disadvantages</a></li>
+						<li><a href="#mlfq-os">Operating Systems</a></li>
+					</ol>
+				</div>
+
+				<!-- How it works -->
+				<div id="mlfq-how" class="item">
+					<h3>How it works</h3>
+
+					<ul>
+						<li>Similar to <em>Multilevel Queue Scheduling</em>, but processes can <strong>move between queues</strong></li>
+						<li>There are <strong>multiple queues</strong>, each with different <strong>time quantums/slices</strong> that are greater for lower priority queues</li>
+						<li>Processes start in the <strong>highest priority queue</strong></li>
+						<li>If a process takes longer than the queue's time quantum/slice, it's <strong>moved</strong> to the lower priority queue</li>
+						<li>Processes in lower priority queues can only execute when <strong>all</strong> higher priority queues are <strong>empty</strong></li>
+						<li>Processes executing in lower priority queues are <strong>interrupted</strong> by new processes in higher level queues</li>
+						<li>If a process waits <strong>too long</strong> in the lowest priority queue, it's moved to the highest priority queue and <strong>forced to execute</strong></li>
+						<li>It's a <strong>preemptive</strong> algorithm - it will interrupt what's in the CPU</li>
+					</ul>
+				</div>
+
+				<!-- Advantages -->
+				<div id="mlfq-advantages" class="item">
+					<h3>Advantages</h3>
+
+					<ul>
+						<li>It prevents <strong>starvation</strong> - when a process is constantly waiting for other processes to finish executing</li>
+					</ul>
+				</div>
+
+				<!-- Disadvantages -->
+				<div id="mlfq-disadvantages" class="item">
+					<h3>Disadvantages</h3>
+
+					<ul>
+						<li>It produces more <strong>CPU Overheads</strong> - time spent with no useful work done</li>
+						<li>It's a very <string>complex</string> algorithm</li>
+					</ul>
+				</div>
+
+				<!-- Operating Systems-->
+				<div id="mlfq-os" class="item">
+					<h3>Operating Systems</h3>
+
+					<ul>
+						<li>Windows</li>
+					</ul>
+				</div>
 			</div>
 		</main>
 	</body>
