@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Databases</title>
-        <link rel="stylesheet" href="../main.css" />
-    </head>
+	<head>
+		<title>Databases</title>
+		<link rel="stylesheet" href="../main.css" />
+	</head>
 
-    <body>
-        <header>
-            <h1 id="title">Databases</h1>
-            <h4 id="menu-link"><a href="../index.html">Menu</a></h4>
-        </header>
+	<body>
+		<header>
+			<h1 id="title">Databases</h1>
+			<h4 id="menu-link"><a href="../index.html">Menu</a></h4>
+		</header>
 
-        <main>
-            <!-- Contents -->
-            <div class="border_left">
-                <h2>Contents</h2>
-                <ol>
-                    <li><a href="#keys">Keys</a></li>
-                </ol>
-            </div>
+		<main>
+			<!-- Contents -->
+			<div class="border_left">
+				<h2>Contents</h2>
+				<ol>
+					<li><a href="#keys">Keys</a></li>
+				</ol>
+			</div>
 
-            <!-- Keys -->
-			<div id="keys" class="border_left">
+			<!-- Keys -->
+				<div id="keys" class="border_left">
 				<h2>Keys</h2>
 
 				<div class="list">
-                    <ol>
-                        <li><a href="#keys-primary">Primary Keys</a></li>
-                        <li><a href="#keys-composite">Composite Keys</a></li>
-                    </ol>
+					<ol>
+						<li><a href="#keys-primary">Primary Keys</a></li>
+						<li><a href="#keys-composite">Composite Keys</a></li>
+					</ol>
 				</div>
 
 				<!-- Primary Keys -->
 				<div id="keys-primary" class="item">
-				    <h3>Primary Keys</h3>
+					<h3>Primary Keys</h3>
 					<p>Each record must have a <em>Primary Key</em>. They are used to identify each record, and therefore must be <strong>unique</strong>. They also <strong>cannot be null</strong>, as they then wouldn't be unique.</p>
 				</div>
-                
-                <!-- Composite Keys -->
-                <div id="keys-composite" class="item">
-                    <h3>Composite Keys</h3>
-                    <p>A <em>Composite Key</em> is when two or more <strong>fields</strong> are combined to make a <strong>primary key</strong>. These fields can be foreign keys, but do not have to be.</p>
-                    <p>For example, a database used for a library might combine the customer's ID, the book's ISBN, and the date to make a unique primary key.</p>
-                </div>
-            </div>
-        </main>
-    </body>
+
+				<!-- Composite Keys -->
+				<div id="keys-composite" class="item">
+					<h3>Composite Keys</h3>
+					<p>A <em>Composite Key</em> is when two or more <strong>fields</strong> are combined to make a <strong>primary key</strong>. These fields can be foreign keys, but do not have to be.</p>
+					<p>For example, a database used for a library might combine the customer's ID, the book's ISBN, and the date to make a unique primary key.</p>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
