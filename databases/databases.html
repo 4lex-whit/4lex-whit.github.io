@@ -28,6 +28,7 @@
 				<div class="list">
 					<ol>
 						<li><a href="#keys-primary">Primary Keys</a></li>
+						<li><a href="#keys-foreign">Foreign Keys</a></li>
 						<li><a href="#keys-composite">Composite Keys</a></li>
 					</ol>
 				</div>
@@ -36,6 +37,13 @@
 				<div id="keys-primary" class="item">
 					<h3>Primary Keys</h3>
 					<p>Each record must have a <em>Primary Key</em>. They are used to identify each record, and therefore must be <strong>unique</strong>. They also <strong>cannot be null</strong>, as they then wouldn't be unique.</p>
+				</div>
+
+				<!-- Foreign Keys -->
+				<div id="keys-foreign" class="item">
+					<h3>Foreign Keys</h3>
+					<p>A <em>Foreign Key</em> is used to reference a <strong>primary key</strong> from another table. Unlike primary keys, a foreign key can have a value of null, as they can repeat.</p>
+					<p>For example, a database used for a college might have two tables - one for courses and one for students. To avoid repeating data, the students table would use the course IDs as a foreign key to keep track of the courses students are enrolled in.</p>
 				</div>
 
 				<!-- Composite Keys -->
