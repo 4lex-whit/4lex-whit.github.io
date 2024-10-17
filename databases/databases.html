@@ -136,6 +136,77 @@
 						<li>Identify a new primary key for the group of fields</li>
 						<li>Reference the new primary key as a foreign key in the original table</li>
 					</ol>
+
+					<h4>Example</h4>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Phone</th>
+							<th>Country</th>
+						</tr>
+						<tr>
+							<td>Alex Whitaker</td>
+							<td>07973 929122</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>Dairy Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>Asteroid Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>Cassette Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+					</table>
+
+					<p>The table above is not in 1NF for two reasons. First, there is no primary key. Second, the <em>Name</em> field is not atomised.</p>
+
+					<table>
+						<tr>
+							<th>User_ID</th>
+							<th>Forename</th>
+							<th>Surname</th>
+							<th>Phone</th>
+							<th>Country</th>
+						</tr>
+						<tr>
+							<td>00001</td>
+							<td>Alex</td>
+							<td>Whitaker</td>
+							<td>07973 929122</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>00002</td>
+							<td>Dairy</td>
+							<td>Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>00003</td>
+							<td>Asteroid</td>
+							<td>Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+						<tr>
+							<td>00004</td>
+							<td>Cassette</td>
+							<td>Rat</td>
+							<td>01902 747467</td>
+							<td>United Kingdom</td>
+						</tr>
+					</table>
+
+					<p>This is the table after being normalised to 1NF. It now has a <em>User_ID</em> field which is the primary key, and the <em>Name</em> field has been atomised into a <em>Forename</em> and <em>Surname</em> field.</p>
 				</div>
 
 				<!-- Second Normal Form (2NF) -->
