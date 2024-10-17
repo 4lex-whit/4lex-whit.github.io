@@ -18,6 +18,7 @@
 				<h2>Contents</h2>
 				<ol>
 					<li><a href="#keys">Keys</a></li>
+					<li><a href="#referential-integrity">Referential Integrity</a></li>
 				</ol>
 			</div>
 
@@ -59,6 +60,44 @@
 					<h3>Secondary Keys</h3>
 					<p>A <em>Secondary Key</em> is a <strong>field</strong> used for <strong>sorting</strong> and/or <strong>searching</strong>. They can be foreign keys, but do not have to be.</p>
 					<p>For example, a database used for a company might have a table of employees which contains a <em>Surname</em> field. This is both used to store essential information, but also to sort and search through all the employees.</p>
+				</div>
+			</div>
+
+			<!-- Referential Integrity -->
+			<div id="referential-integrity" class="border_left">
+				<h2>Referential Integrity</h2>
+
+				<div class="list">
+					<ol>
+						<li><a href="#referential-integrity_what-is">What is Referential Integrity?</a></li>
+						<li><a href="#referential-integrity_advantages">Advantages</a></li>
+						<li><a href="#referential-integrity_disadvantages">Disadvantages</a></li>
+					</ol>
+				</div>
+
+				<!-- What is Referential Integrity -->
+				<div id="referential-integrity_what-is" class="item">
+					<h3>What is Referential Integrity?</h3>
+					<p><em>Referential Integrity</em> is a rule that can be applied to a relational database in order to maintain valid relationships between tables. This rule states <strong>the value in a foreign key field must either reference a valid primary key, or be null</strong>.</p>
+					<p>It's an essential rule to follow - especially when working with larger databases - as primary keys will inevitably be updated or deleted, and foreign keys (if not updated accordingly) will end up referencing non-existent values. Due to those records not having a valid reference, they now becomes lost in the database as they won't show up in new queries, and will waste storage space.</p>
+				</div>
+
+				<!-- Advantages -->
+				<div id="referential-integrity_advantages" class="item">
+					<h3>Advantages</h3>
+					<ul>
+						<li>Keeps data consistent and accurate</li>
+						<li>Prevents orphaned records</li>
+					</ul>
+				</div>
+
+				<!-- Disadvantages -->
+				<div id="referential-integrity_disadvantages" class="item">
+					<h3>Disadvantages</h3>
+					<ul>
+						<li>Can impact performance due to additional checks</li>
+						<li>Will require additional planning and design</li>
+					</ul>
 				</div>
 			</div>
 		</main>
