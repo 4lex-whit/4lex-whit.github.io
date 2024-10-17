@@ -351,6 +351,78 @@
 						<li>Use the dependent field as the primary key for the new table</li>
 						<li>Reference the new primary key as a foreign key in the original table</li>
 					</ol>
+
+					<h4>Example</h4>
+					<table>
+						<tr>
+							<th>ISBN</th>
+							<th>Room_ID</th>
+							<th>Category_Code</th>
+							<th>Category_Description</th>
+						</tr>
+						<tr>
+							<td>0-374-29921-8</td>
+							<td>A3</td>
+							<td>04</td>
+							<td>coming-of-age</td>
+						</tr>
+						<tr>
+							<td>978-1526604965</td>
+							<td>D2</td>
+							<td>12</td>
+							<td>queer</td>
+						</tr>	
+						<tr>
+							<td>44800071</td>
+							<td>A1</td>
+							<td>12</td>
+							<td>queer</td>
+						</tr>
+					</table>
+
+					<p>The table above is not in 3NF as it contains transitive dependencies, as the field <em>Category_Description</em> only depends on <em>Category_ID</em>, another non-key field.
+
+					<table>
+						<tr>
+							<th>ISBN</th>
+							<th>Room_ID</th>
+							<th>Category_Code</th>
+						</tr>
+						<tr>
+							<td>0-374-29921-8</td>
+							<td>A3</td>
+							<td>04</td>
+						</tr>
+						<tr>
+							<td>978-1526604965</td>
+							<td>D2</td>
+							<td>12</td>
+						</tr>	
+						<tr>
+							<td>44800071</td>
+							<td>A1</td>
+							<td>12</td>
+						</tr>
+					</table>
+
+					<br>
+
+					<table>
+						<tr>
+							<th>Category_ID</th>
+							<th>Category_Description</th>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td>coming-of-age</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>queer</td>
+						</tr>
+					</table>
+
+					<p>These are the tables after being normalised to 3NF. The fields with transitive dependencies have been moved to a new table, with the dependency as the primary key. This primary key is then referenced as a foreign key in the original table.</p>
 				</div>
 			</div>
 		</main>
