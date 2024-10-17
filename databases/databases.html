@@ -19,6 +19,7 @@
 				<ol>
 					<li><a href="#keys">Keys</a></li>
 					<li><a href="#referential-integrity">Referential Integrity</a></li>
+					<li><a href="#normalisation">Normalisation</a></li>
 				</ol>
 			</div>
 
@@ -98,6 +99,87 @@
 						<li>Can impact performance due to additional checks</li>
 						<li>Will require additional planning and design</li>
 					</ul>
+				</div>
+			</div>
+
+			<!-- Normalisation -->
+			<div id="normalisation" class="border_left">
+				<h2>Normalisation</h2>
+
+				<div class="list">
+					<ol>
+						<li><a href="#normalisation_first-form">First Normal Form (1NF)</a></li>
+						<li><a href="#normalisation_second-form">Second Normal Form (2NF)</a></li>
+						<li><a href="#normalisation_third-form">Third Normal Form (3NF)</a></li>
+					</ol>
+				</div>
+
+				<!-- First Normal Form (1NF) -->
+				<div id="normalisation_first-form" class="item">
+					<h3>First Normal Form (1NF)</h3>
+
+					<h4>Rules</h4>
+					<ul>
+						<li>
+							Fields must be <strong>atomised</strong><br>
+							<em> - broken up into their smallest parts</em>
+						</li>
+						<li>Records must have a <strong>primary key</strong></li>
+						<li>There must be <strong>no duplicate records</strong></li>
+						<li>Fields must <strong>not repeat</strong></li>
+					</ul>
+
+					<h4>Steps</h4>
+					<ol>
+						<li>Identify the repeating groups of fields</li>
+						<li>Move these fields into a new table</li>
+						<li>Identify a new primary key for the group of fields</li>
+						<li>Reference the new primary key as a foreign key in the original table</li>
+					</ol>
+				</div>
+
+				<!-- Second Normal Form (2NF) -->
+				<div id="normalisation_second-form" class="item">
+					<h3>Second Normal Form (2NF)</h3>
+
+					<h4>Rules</h4>
+					<ul>
+						<li>The table must be in <strong>1NF</strong></li>
+						<li>
+							There must be <strong>no partial dependencies</strong><br>
+							<em> - fields that only depend on a part of a composite key</em>
+						</li>
+					</ul>
+
+					<h4>Steps</h4>
+					<ol>
+						<li>Identify any fields dependent on only part of the composite key</li>
+						<li>Move these fields into a new table</li>
+						<li>Use the dependent part of the composite key as the primary key for the new table</li>
+						<li>Reference the new primary key as a foreign key in the composite key in the original table</li>
+					</ol>
+				</div>
+
+				<!-- Third Normal Form (3NF) -->
+				<div id="normalisation_third-form" class="item">
+					<h3>Third Normal Form (3NF)</h3>
+
+					<h4>Rules</h4>
+					<ul>
+						<li>The table must be in <strong>2NF</strong></li>
+						<li>
+							There must be <strong>no transitive dependencies</strong><br>
+							<em> - fields that only depend on other non-key fields</em>
+						</li>
+					</ul>
+
+					<h4>Steps</h4>
+					<ol>
+						<li>Identify any fields dependent on other non-key field</li>
+						<li>Move these fields into a new table</li>
+						<li>Use the dependent field as the primary key for the new table</li>
+						<li>Reference the new primary key as a foreign key in the original table</li>
+					</ol>
 				</div>
 			</div>
 		</main>
