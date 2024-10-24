@@ -18,6 +18,7 @@
 				<h2>Contents</h2>
 				<ol>
 					<li><a href="#q1">In your own words, describe what a transaction is and how ACID applies.</a></li>
+					<li><a href="#q2">Investigate how transactions are carried out. Investigate if there are any benefits to the way transactions are carried out.</a></li>
 				</ol>
 			</div>
 
@@ -25,6 +26,16 @@
 			<div id="q1" class="border_left">
 				<h2>1. In your own words, describe what a transaction is and how ACID applies.</h2>
 				<p>A transaction is a set of operations carried out on a database. ACID is a set of rules applied to transactions to ensure data integrity is maintained.</p>
+			</div>
+
+			<!-- Question 2 -->
+			<div id="q2" class="border_left">
+				<h2>2. Investigate how transactions are carried out. Investigate if there are any benefits to the way transactions are carried out.</h2>
+				<p><strong>Initiation</strong>: the transaction begins when the system or a user carries out an action. E.g. purchasing an item with a debit card.</p>
+				<p><strong>Validation</strong>: the system checks that the transaction is valid. E.g. verifying the user has enough money in their account.</p>
+				<p><strong>Execution</strong>: the transaction is executed, which involves multiple steps unique on the transaction. E.g. the user's money is deducted from their account and deposited into the store's.</p>
+				<p><strong>Commitment</strong>: if all steps are completed successfully, the transaction is committed. This means changes are permanently applied to the database.</p>
+				<p><strong>Rollback</strong>: if any step fails, then the entire transaction is rolled back. This means the database is reverted to its state before the transaction.</p>
 			</div>
 		</main>
 	</body>
